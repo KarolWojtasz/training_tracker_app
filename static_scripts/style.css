@@ -1,0 +1,14 @@
+.traing_day {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    height: auto;
+    border: 1px solid blue;
+    display: block;
+
+}
+
+option {
+    width: 100px;
+    height: auto;
+}
