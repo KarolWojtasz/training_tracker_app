@@ -77,8 +77,10 @@ app.post('/register', checkNotAuth, async (req, res) => {
                 password: hashedPassword
             })
             newUser.save((err) => {
-                if (err)
+                if (err) {
                     console.log("error in adding to db")
+                }
+
                 console.log("New user registered")
             });
 

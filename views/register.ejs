@@ -1,14 +1,29 @@
-<h1>
-    Register
-</h1>
-<% if (messages.error) {%>
-    <%=messages.error %>
-        <% }%>
-            <form action="/register" method="POST">
-                <label>name<input name="name" type="text" /></label><br><br>
-                <label>Email<input name="email" type="email" /></label><br><br>
-                <label>Password<input name="password" type="password" /></label><br><br>
+<!DOCTYPE html>
+<html lang="en">
 
-                <button type="submit" name="submit">Register</button>
-                <a href="/login">Login</a>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <h1>
+        Register
+    </h1>
+
+    <form action="/register" method="POST">
+        <label>name<input required="required" name="name" type="text" /></label>
+        <label>Email<input required="required" name="email" type="email" /></label>
+        <label>Password<input required="required" name="password" type="password" /></label>
+        <% if (messages.error) {%>
+            <%=messages.error %>
+                <% }%>
+                    <button type="submit" name="submit">Register</button>
+                    <a href="/login">Already hve an account: click here</a>
+    </form>
+</body>
+
+</html>

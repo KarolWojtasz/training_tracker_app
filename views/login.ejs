@@ -1,14 +1,30 @@
-<h1>
-    Login
-</h1>
-<% if (messages.error) {%>
-    <%=messages.error %>
-        <% }%>
+<!DOCTYPE html>
+<html lang="en">
 
-            <form action="/login" method="POST">
-                <label>Email<input name="email" type="text" /></label><br><br>
-                <label>Password<input name="password" type="password" /></label><br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
 
-                <button type="submit" name="submit">Login</button>
-                <a href="/register">Register</a>
-            </form>
+</head>
+
+<body>
+    <h1>
+        Login
+    </h1>
+
+
+    <form action="/login" method="POST">
+        <label>Email<input name="email" type="text" /></label>
+        <label>Password<input name="password" type="password" /></label>
+        <% if (messages.error) {%>
+            <%=messages.error %>
+                <% }%>
+                    <button type="submit" name="submit">Login</button>
+                    <a href="/register">Don't have account: click here</a>
+    </form>
+</body>
+
+</html>

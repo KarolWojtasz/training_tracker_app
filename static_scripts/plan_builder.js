@@ -59,7 +59,6 @@ function addExcercise() {
     var image = document.createElement("img")
     image.class = "exercise_image";
     container.appendChild(image)
-    //"/exercises/' + excercise.name.toString().replaceAll(" ", "_").replaceAll("/", "_") + '/images/0.jpg"/>
     var select = document.createElement("select");
     select.id = "exercises_select"
     console.log(excercises_list)
@@ -69,8 +68,6 @@ function addExcercise() {
         option_excercise.value = excercise.name
         select.appendChild(option_excercise);
     }
-
-
     select.addEventListener("mouseover", function () {
         console.log(this)
         this.parentElement.children[0].src = '/exercises/' + select.value.toString().replaceAll(" ", "_").replaceAll("/", "_") + '/images/0.jpg'
