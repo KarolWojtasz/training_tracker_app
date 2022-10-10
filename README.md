@@ -6,7 +6,7 @@ Login and registration with passport.js
 
 Database used: MongoDB with mongoose
 
-
+To make it work paste exercises folder from https://github.com/wrkout/exercises.json to static_scripts folder
 
 
 
